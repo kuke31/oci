@@ -88,4 +88,5 @@ tail -f log/amd_YYYY-MM-DD.log
 # 效果图
 ![Design](https://github.com/kuke31/oci/blob/35ab8cfdd7dd804de71e3482474fa0b78977434e/img/2bc95c.png)
 ![ARM](https://github.com/kuke31/oci/blob/09611fc1d708503b9e205890cad526338f8fb2c9/img/a9abef3d-192c-49de-abb2-3b3b17680ef4.png)
+![log](https://github.com/kuke31/oci/blob/de2242a21722ac21d3fa7dc1457589ba943fcbc9/img/7e791ddc-0568-4fb1-bf64-191fa106d3ef.png)
 ![open](https://github.com/kuke31/oci/blob/5c2378a12aaba7c4671604311a25141377e100c5/img/69ddcfc6-f5c5-4e2e-b05d-c3aea8597e3a.png)
