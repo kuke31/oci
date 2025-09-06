@@ -14,7 +14,38 @@ oci setup config
 ```
 chmod 600 /root/.oci/config
 ```
+修改私钥文件权限 （我这以home为例）
+```
+chmod 600 /home/1111@11111-2025-08-24T09_14_41.053Z.pem
+```
 # 脚本安装
+以yum系列linux演示，apt系列linux命令有点出入 安装依赖
+```
+yum install python3-pip -y && pip3 install oci && pip install requests && pip install prettytable
+```
+```
+vi /home/api.conf
+```
+把以下内容保存到api.conf 脚本需要，key_file 为开机后需要的公钥，钉钉通知 webhook和secret请自行获取（不知道请百度或谷歌找教程）
+```
+[DEFAULT]
+user = ocid1.user.oc1..aa
+fingerprint = 4f:86:27:fa:e9:1f:90:bb:27
+tenancy = ocid1.tenancy.oc1..aaaaaaaapfc7on7ljnylc2x5bpfj
+region = ap-singapore-1
+key_file = /home/ssh-key-2025-07-20.key.pub
 
-# oci
-OCI 抢机脚本 - 钉钉通知版
+# 钉钉通知
+[DINGTALK]
+webhook =
+secret =
+```
+# 测试OCI
+```
+oci iam availability-domain list
+```
+# OCI 抢机脚本
+```
+wget https://raw.githubusercontent.com/kuke31/oci/main/seckill.py
+```
+
