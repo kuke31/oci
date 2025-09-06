@@ -1,3 +1,5 @@
+# 前言
+不折腾甲骨文了，公布自用抢购脚本，不保证会更新，基于OCI命令编写终端交互安全系数更高。
 # 脚本优缺点
 - 交互式配置，支持ARM和AMD架构
 - 自动后台运行，日志保存到log目录
@@ -7,7 +9,7 @@
 - 内存消耗80-110M
 
 - 单账户，无Web
-- 仅支持公私验证
+- 仅支持公私验证登录服务器
 # OCI安装
 一路回车 注意：要按 y <br>私钥为你API的私钥文件 （比如：1111@11111-2025-08-24T09_14_41.053Z.pem  不是public.pem）
 ```
@@ -59,7 +61,28 @@ oci iam availability-domain list
 wget https://raw.githubusercontent.com/kuke31/oci/main/seckill.py
 ```
 # 使用方法
+直接执行
 ```
 python3 seckill.py
+```
+获取进程ID
+```
+ps aux | grep seckill.py
+```
+停止脚本
+```
+kill 123456 
+```
+或
+```
+pkill -f seckill.py
+```
+# 查看日志
+```
+tail -f log/arm_YYYY-MM-DD.log
+```
+或
+```
+tail -f log/amd_YYYY-MM-DD.log
 ```
 
