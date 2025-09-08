@@ -60,6 +60,7 @@ oci iam availability-domain list
 ```
 wget https://raw.githubusercontent.com/kuke31/oci/main/seckill.py
 ```
+可选
 ```
 wget https://raw.githubusercontent.com/kuke31/oci/main/sl.py
 ```
@@ -80,7 +81,7 @@ kill 123456
 ```
 pkill -f seckill.py
 ```
-查看实例 （图片在底部）
+查看实例
 ```
 python3 sl.py
 ```
