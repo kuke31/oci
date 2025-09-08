@@ -26,7 +26,7 @@ oci setup config
 ```
 chmod 600 /root/.oci/config
 ```
-修改私钥文件权限 （我这以home为例）
+修改私钥文件权限 （我这以 home 为例）
 ```
 chmod 600 /home/1111@11111-2025-08-24T09_14_41.053Z.pem
 ```
@@ -81,7 +81,7 @@ kill 123456
 ```
 pkill -f seckill.py
 ```
-查看实例
+查看实例（有它不需要登录甲骨文控制台即可查看所有实例）
 ```
 python3 sl.py
 ```
