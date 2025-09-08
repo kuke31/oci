@@ -1,14 +1,14 @@
 # 前言
-不折腾甲骨文了，公布自用抢购脚本，不保证会更新，基于OCI命令编写终端交互安全系数更高。补一句：有问题请自行解决
+不折腾甲骨文了，公布自用抢购脚本，不保证会更新，基于OCI命令编写终端交互安全系数更高，有问题请自行解决。
 # 脚本优缺点
 - 交互式配置，支持ARM和AMD架构
 - 自动后台运行，日志保存到log目录
 - 智能重试机制，网络异常自动重试
-- 自动创建虚拟云网络，VPC网络（非传统网络/基础网络）
+- 自动创建虚拟云网络，VPC网络（默认内网互通）
 - 自动开启IPV6
 - 内存消耗80-110M
 
-- 单账户，无Web
+- 单账户，无Web,功能不如Web全面
 - 仅支持公私验证登录服务器
 # OCI安装
 一路回车 注意：要按 y <br>私钥为你API的私钥文件 （比如：1111@11111-2025-08-24T09_14_41.053Z.pem  不是public.pem）
@@ -60,6 +60,9 @@ oci iam availability-domain list
 ```
 wget https://raw.githubusercontent.com/kuke31/oci/main/seckill.py
 ```
+```
+wget https://raw.githubusercontent.com/kuke31/oci/main/sl.py
+```
 # 使用方法
 直接执行
 ```
@@ -77,6 +80,10 @@ kill 123456
 ```
 pkill -f seckill.py
 ```
+查看实例 （图片在底部）
+```
+python3 sl.py
+```
 # 查看日志
 ```
 tail -f log/arm_YYYY-MM-DD.log
@@ -89,4 +96,5 @@ tail -f log/amd_YYYY-MM-DD.log
 ![Design](https://github.com/kuke31/oci/blob/35ab8cfdd7dd804de71e3482474fa0b78977434e/img/2bc95c.png)
 ![ARM](https://github.com/kuke31/oci/blob/09611fc1d708503b9e205890cad526338f8fb2c9/img/a9abef3d-192c-49de-abb2-3b3b17680ef4.png)
 ![log](https://github.com/kuke31/oci/blob/de2242a21722ac21d3fa7dc1457589ba943fcbc9/img/7e791ddc-0568-4fb1-bf64-191fa106d3ef.png)
+![sl](https://github.com/kuke31/oci/blob/4869d27da0a1a25eb6fafc76becd06b65ba10cf1/img/9a7357fd-31c3-433c-a584-cb747f260443.png)
 ![open](https://github.com/kuke31/oci/blob/5c2378a12aaba7c4671604311a25141377e100c5/img/69ddcfc6-f5c5-4e2e-b05d-c3aea8597e3a.png)
